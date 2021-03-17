@@ -14,10 +14,10 @@
       <nav>
         <ul onclick="getElementById('close-menu').checked = false;">
             {%if 'cadastro' not in request.path and 'login' not in request.path  %}
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#comments">Avaliações</a></li>
-                <li><a href="#products">Produtos</a></li>
-                <li><a href="#contact">Contato</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#avaliacoes">Avaliações</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
             {% endif %}
             <li><a href="/login/">Login</a></li>
             <li><a href="/cadastro/">Cadastro</a></li>
