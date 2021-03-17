@@ -4,39 +4,15 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Math's Burguer | Home</title>
-  <link rel="shortcut icon" href="{% static 'home/img/icons/hamburguer.ico' %}"/>
+    {% include 'home/partials/_head.html'  %}
+    <title>Math's Burguer | Home</title>
 
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'home/css/landingPage.css' %}">
 </head>
 
 <body>
 
-  <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
-  <label class="close-menu-label" for="close-menu" title="close menu"></label>
-  <aside class="menu white-bg">
-    <div class="main-content menu-content">
-      <h1 onclick="getElementById('close-menu').checked = false;">
-        <a href="#home">Math's Burguer</a>
-      </h1>
-
-      <nav>
-        <ul onclick="getElementById('close-menu').checked = false;">
-          <li><a href="#intro">Sobre</a></li>
-          <li><a href="#grid-one">Avaliações</a></li>
-          <li><a href="#gallery">Produtos</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
-  </aside>
-
-  <div class="menu-spacing"></div>
+  {% include 'home/partials/_header.html' %}
 
   <section id="home" class="intro main-bg section">
     <div class="main-content intro-content">
@@ -50,7 +26,7 @@
     </div>
   </section>
 
-  <section id="intro" class="white-bg section">
+  <section id="about" class="white-bg section">
     <div class="main-content top3-content">
       <div class="about-us-card">
         <h2>Sobre Nós</h2>
@@ -61,7 +37,7 @@
       </div>
   </section>
 
-  <section id="grid-one" class="grid-one secondary-bg section">
+  <section id="comments" class="grid-one secondary-bg section">
     <div class="main-content grid-one-content">
       <h2 class="grid-main-heading">Avaliações</h2>
       <p class="grid-description">Não acredita em nós? Então acredite em quem compra aqui!</p>
@@ -89,7 +65,7 @@
     </div>
   </section>
 
-  <section id="gallery" class="grid-one white-bg section">
+  <section id="products" class="grid-one white-bg section">
     <div class="main-content grid-one-content">
       <h2 class="grid-main-heading">Coma com os olhos!</h2>
       <p class="grid-description">Os mais pedidos, para você dar uma espiadinha.</p>
@@ -157,32 +133,7 @@
     </div>
   </section>
 
-  <footer id="footer" class="footer white-bg">
-    <p>
-      Feito por Matheus Afinovicz
-    </p>
-
-    <div class="footer-icons">
-      <p>
-        <a rel="nofollow" target="_blank" href="https://github.com/MatheusAfinovicz">
-          <img class="footer-img" src="{% static 'home/img/icons/githubIcon.png' %}" alt="github icon"/>
-        </a>
-      </p>
-
-      <p>
-        <a rel="nofollow" target="_blank" href="https://www.linkedin.com/in/matheusafinovicz/">
-          <img class="footer-img" src="{% static 'home/img/icons/linkedinIcon.png' %}" alt="linkedin icon"/>
-        </a>
-      </p>
-
-      <p>
-        <a rel="nofollow" target="_blank" href="https://www.instagram.com/matheus_afinovicz/">
-          <img class="footer-img" src="{% static 'home/img/icons/instagramIcon.png' %}" alt="instagram icon"/>
-        </a>
-      </p>
-    </div>
-
-  </footer>
-  <a class="back-to-top" href="#">➤</a>
+    {% include 'home/partials/_footer.html' %}
+    {% include 'home/partials/_to_top_button.html' %}
 </body>
 </html>
