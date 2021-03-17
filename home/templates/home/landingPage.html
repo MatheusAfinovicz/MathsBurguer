@@ -5,135 +5,140 @@
 
 <head>
 
-    {% include 'home/partials/_head.html'  %}
+    {% include 'home/partials/_head.html' %}
     <title>Math's Burguer | Home</title>
 
 </head>
 
 <body>
 
-  {% include 'home/partials/_header.html' %}
+{% include 'home/partials/_header.html' %}
 
-  <section id="home" class="intro main-bg section">
+<section id="home" class="intro main-bg section">
     <div class="main-content intro-content">
-      <div class="intro-text-content">
-        <h2>Math's Burguer</h2>
-        <p>O melhor hambúrguer artesanal de Guarapuava.</p>
-      </div>
-      <div class="intro-img">
-        <img src="{% static 'home/img/backgrounds/hamburguer.svg' %}" alt="Hambúrguer.">
-      </div>
+        <div class="intro-text-content">
+            <h2>Math's Burguer</h2>
+            <p>O melhor hambúrguer artesanal de Guarapuava.</p>
+        </div>
+        <div class="intro-img">
+            <img src="{% static 'home/img/backgrounds/hamburguer.svg' %}" alt="Hambúrguer.">
+        </div>
     </div>
-  </section>
+</section>
 
-  <section id="sobre" class="white-bg section">
+<section id="sobre" class="white-bg section">
     <div class="main-content top3-content">
-      <div class="about-us-card">
-        <h2>Sobre Nós</h2>
-        <p>Surgimos com o objetivo de te entregar o hambúrguer mais delicioso que você conseguirá provar.</p>
-        <p>Todos feitos individualmente, com ingredientes da melhor qualidade, selecionados especialmente para você.</p>
-        <p>Impossível não se apaixonar.</p>
-      </div>
-      </div>
-  </section>
-
-  <section id="avaliacoes" class="grid-one secondary-bg section">
-    <div class="main-content grid-one-content">
-      <h2 class="grid-main-heading">Avaliações</h2>
-      <p class="grid-description">Não acredita em nós? Então acredite em quem compra aqui!</p>
-
-      <div class="grid">
-        <article class="card">
-          <h3>João da Silva</h3>
-          <img src="{% static 'home/img/users/joao.png' %}" alt="joão"/>
-          <p>O melhor hamburguer que eu ja comi na vida! Recomendo para todos!</p>
-          <legend>27/01/2021</legend>
-        </article>
-        <article class="card">
-          <h3>Carminha</h3>
-          <img src="{% static 'home/img/users/carminha.jpg' %}" alt="Carminha"/>
-          <p>O melhor hamburguer que eu ja comi na vida! Recomendo para todos!</p>
-          <legend>20/01/2021</legend>
-        </article>
-        <article class="card">
-          <h3>Neymar Jr</h3>
-          <img src="{% static 'home/img/users/neymar.jpg' %}" alt="Neymar"/>
-          <p>O melhor hamburguer que eu ja comi na vida! Recomendo para todos!</p>
-          <legend>11/03/2021</legend>
-        </article>
-      </div>
+        <div class="about-us-card">
+            <h2>Sobre Nós</h2>
+            <p>Surgimos com o objetivo de te entregar o hambúrguer mais delicioso que você conseguirá provar.</p>
+            <p>Todos feitos individualmente, com ingredientes da melhor qualidade, selecionados especialmente para
+                você.</p>
+            <p>Impossível não se apaixonar.</p>
+        </div>
     </div>
-  </section>
+</section>
 
-  <section id="produtos" class="grid-one white-bg section">
+<section id="avaliacoes" class="grid-one secondary-bg section">
     <div class="main-content grid-one-content">
-      <h2 class="grid-main-heading">Coma com os olhos!</h2>
-      <p class="grid-description">Os mais pedidos, para você dar uma espiadinha.</p>
+        <h2 class="grid-main-heading">Avaliações</h2>
+        <p class="grid-description">Não acredita em nós? Então acredite em quem compra aqui!</p>
 
-      <div class="grid">
-        <div class="burguers-card">
-          <h3>Burguer da Casa</h3>
-          <img class="burguer-card-img" src="{% static 'home/img/products/hamburguerEspecial.jpg' %}" alt="Hambúrguer especial da casa." />
-          <p>200 gramas de hambúrguer de costela;<br>Folhas de alface americana;<br>Tomates fresquinhos;<br>Queijo prato;<br>Maionese da casa.</p>
+        <div class="grid">
+            <article class="card">
+                <h3>João da Silva</h3>
+                <img src="{% static 'home/img/users/joao.png' %}" alt="joão"/>
+                <p>O melhor hamburguer que eu ja comi na vida! Recomendo para todos!</p>
+                <legend>27/01/2021</legend>
+            </article>
+            <article class="card">
+                <h3>Carminha</h3>
+                <img src="{% static 'home/img/users/carminha.jpg' %}" alt="Carminha"/>
+                <p>O melhor hamburguer que eu ja comi na vida! Recomendo para todos!</p>
+                <legend>20/01/2021</legend>
+            </article>
+            <article class="card">
+                <h3>Neymar Jr</h3>
+                <img src="{% static 'home/img/users/neymar.jpg' %}" alt="Neymar"/>
+                <p>O melhor hamburguer que eu ja comi na vida! Recomendo para todos!</p>
+                <legend>11/03/2021</legend>
+            </article>
         </div>
-        <div class="burguers-card">
-          <h3>Bacon Burguer</h3>
-          <img class="burguer-card-img" src="{% static 'home/img/products/hamburguerBacon.jpeg' %}" alt="Bacon Burguer."/>
-          <p>180 gramas de hambúrguer bovino;<br>Queijo prato;<br>Bacon;<br>Muito bacon.</p>
-        </div>
-        <div class="burguers-card">
-          <h3>Cheddar Burguer</h3>
-          <img class="burguer-card-img" src="{% static 'home/img/products/hamburguerCheddar.jpg' %}" alt="Cheddar Burguer."/>
-          <p>180 gramas de hambúrguer bovino;<br>Cebola caramelizada;<br>Queijo cheddar.</p>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
-  <section id="contato" class="intro main-bg section">
+<section id="produtos" class="grid-one white-bg section">
+    <div class="main-content grid-one-content">
+        <h2 class="grid-main-heading">Coma com os olhos!</h2>
+        <p class="grid-description">Os mais pedidos, para você dar uma espiadinha.</p>
+
+        <div class="grid">
+            <div class="burguers-card">
+                <h3>Burguer da Casa</h3>
+                <img class="burguer-card-img" src="{% static 'home/img/products/hamburguerEspecial.jpg' %}"
+                     alt="Hambúrguer especial da casa."/>
+                <p>200 gramas de hambúrguer de costela;<br>Folhas de alface americana;<br>Tomates fresquinhos;<br>Queijo
+                    prato;<br>Maionese da casa.</p>
+            </div>
+            <div class="burguers-card">
+                <h3>Bacon Burguer</h3>
+                <img class="burguer-card-img" src="{% static 'home/img/products/hamburguerBacon.jpeg' %}"
+                     alt="Bacon Burguer."/>
+                <p>180 gramas de hambúrguer bovino;<br>Queijo prato;<br>Bacon;<br>Muito bacon.</p>
+            </div>
+            <div class="burguers-card">
+                <h3>Cheddar Burguer</h3>
+                <img class="burguer-card-img" src="{% static 'home/img/products/hamburguerCheddar.jpg' %}"
+                     alt="Cheddar Burguer."/>
+                <p>180 gramas de hambúrguer bovino;<br>Cebola caramelizada;<br>Queijo cheddar.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="intro main-bg section">
     <div class="main-content intro-content">
-      <div class="intro-text-content">
-        <h2>Ouvidoria</h2>
-        <p>Dúvidas, reclamações ou sugestões? Deixe sua mensagem!</p>
-      </div>
+        <div class="intro-text-content">
+            <h2>Ouvidoria</h2>
+            <p>Dúvidas, reclamações ou sugestões? Deixe sua mensagem!</p>
+        </div>
 
-      <div class="intro-img">
-        <img src="{% static 'home/img/backgrounds/street-food.svg' %}" alt="Caminhão de street food">
-      </div>
+        <div class="intro-img">
+            <img src="{% static 'home/img/backgrounds/street-food.svg' %}" alt="Caminhão de street food">
+        </div>
 
-      <div class="contact-form">
-        <fieldset class="form-grid">
-          <legend>Fale Conosco</legend>
+        <div class="contact-form">
+            <fieldset class="form-grid">
+                <legend>Fale Conosco</legend>
 
-          <div class="form-group">
-            <label for="first-name">Nome</label>
-            <input type="text" name="first-name" id="first-name" placeholder="Seu nome">
-          </div>
+                <div class="form-group">
+                    <label for="first-name">Nome</label>
+                    <input type="text" name="first-name" id="first-name" placeholder="Seu nome">
+                </div>
 
-          <div class="form-group">
-            <label for="last-name">Sobrenome</label>
-            <input type="text" name="last-name" id="last-name" placeholder="Seu sobrenome">
-          </div>
+                <div class="form-group">
+                    <label for="last-name">Sobrenome</label>
+                    <input type="text" name="last-name" id="last-name" placeholder="Seu sobrenome">
+                </div>
 
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Seu e-mail">
-          </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Seu e-mail">
+                </div>
 
-          <div class="form-group full-width">
-            <label for="message">Mensagem</label>
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
-          </div>
+                <div class="form-group full-width">
+                    <label for="message">Mensagem</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
+                </div>
 
-          <div class="form-group full-width">
-            <button type="submit">Enviar</button>
-          </div>
-        </fieldset>
-      </div>
+                <div class="form-group full-width">
+                    <button type="submit">Enviar</button>
+                </div>
+            </fieldset>
+        </div>
     </div>
-  </section>
+</section>
 
-    {% include 'home/partials/_footer.html' %}
-    {% include 'home/partials/_to_top_button.html' %}
+{% include 'home/partials/_footer.html' %}
+{% include 'home/partials/_to_top_button.html' %}
 </body>
 </html>
