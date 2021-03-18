@@ -1,0 +1,110 @@
+body {
+    width: 100%;
+}
+
+.cadastro-background {
+    background-image: url('../img/backgrounds/main-bg.svg');
+    background-size: cover;
+    background-position: center center;
+    color: white;
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: var(--gap);
+  min-height: 100vh;
+}
+
+.cadastro {
+    border: 3px solid black;
+    border-radius: 2.4rem;
+    justify-content: center;
+    flex-flow: column wrap;
+    max-width: 60rem;
+    height: 45rem;
+    display: flex;
+}
+
+.cadastro h6 {
+    font-size: 2.5rem;
+    max-height: 10rem;
+    margin: 2rem 0 1rem 3rem;
+}
+
+.cadastro-form {
+    justify-content: center;
+    flex-flow: column wrap;
+    border: none;
+}
+
+.cadastro-inputs label {
+
+    width: 20rem;
+}
+
+.cadastro-inputs input {
+    align-self: flex-start;
+}
+
+.cadastro-inputs input,
+.cadastro-inputs textarea {
+    border: none;
+    background: white;
+    padding: 1rem 1rem;
+    width: 50%;
+    font-size: 1.5rem;
+    outline: none;
+    height: 3rem;
+}
+
+.cadastro-inputs textarea {
+  height: 70%;
+}
+
+.cadastro-inputs input:focus,
+.cadastro-inputs textarea:focus {
+  box-shadow: 0 0 10px 2px var(--secondary-color);
+}
+
+.cadastro-inputs {
+    display: flex;
+    margin: 2rem 0 1rem 3rem;
+}
+
+.cadastro-button {
+    display: flex;
+    border: 0.5rem solid white;
+    background: none;
+    color: white;
+    padding: 1rem 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    margin: 1rem 0 0 3rem;
+}
+
+.cadastro-button:hover {
+    background: white;
+    color: var(--primary-color);
+}
+
+.login {
+    margin: 1rem 0 0 3rem;
+}
+
+.login a{
+    color: var(--secondary-color);
+}
+
+.intro-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.cadastro-img img, .cadastro-img svg {
+    max-width: 100%;
+    height: auto;
+}

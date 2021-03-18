@@ -1,12 +1,59 @@
+{% load static %}
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
     {% include 'home/partials/_head.html' %}
+
     <title>Math's Burguer | Cadastro</title>
+
+    <link rel="stylesheet" href="{% static 'home/css/cadastro_styles.css' %}">
 </head>
 <body>
 {% include 'home/partials/_header.html' %}
 
+<section class="cadastro-background">
+    <div class="main-content container">
+
+        <div class="cadastro-img">
+            <img src="{% static 'home/img/backgrounds/pessoa-comendo.svg' %}" alt="Hambúrguer.">
+        </div>
+
+        <div class="cadastro">
+            <div class="cadastro-form">
+                <h6>Cadastre-se para saborear nossos irresistíveis sabores.</h6>
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <div class="cadastro-inputs">
+                        <label for="user">Usuário</label>
+                        <input type="text" name="user" id="user" placeholder="Usuário">
+                    </div>
+
+                    <div class="cadastro-inputs">
+                        <label for="email">E-mail</label>
+                        <input class="email-input" type="text" name="email" id="email" placeholder="E-mail">
+                    </div>
+
+                    <div class="cadastro-inputs">
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" id="password" placeholder="Senha">
+                    </div>
+
+                    <div class="cadastro-inputs">
+                        <label for="confirm_password">Repita sua senha</label>
+                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Repita sua senha">
+                    </div>
+
+                    <button class="cadastro-button" type="submit">Enviar</button>
+                </form>
+
+                <div class="login">
+                    <p>Já possui uma conta? Faça login <a href="/login/">AQUI</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 {% include 'home/partials/_footer.html' %}
 {% include 'home/partials/_to_top_button.html' %}
