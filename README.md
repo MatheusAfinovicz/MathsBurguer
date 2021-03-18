@@ -2,11 +2,11 @@
 
 <p align="center">Landing Page com HTML e CSS + Backend em Python e Django para um delivery de lanches</p>
 
-###Requisitos
+<h3>Requisitos</h3>
 
 <li>Python 3.8</li>
 
-###Dependências
+<h3>Dependências</h3>
 
 <li>Criar ambiente virtual:</li>
 
@@ -20,7 +20,7 @@ virtualenv venv
 pip install -r requirements.txt
 ```
 
-###Iniciar servidor:
+<h3>Iniciar servidor:</h3>
 
 ```console
 python manage.py runserver
