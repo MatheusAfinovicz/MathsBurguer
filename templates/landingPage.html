@@ -5,9 +5,9 @@
 
 <head>
 
-    {% include 'home/partials/_head.html' %}
+    {% include 'partials/_head.html' %}
 
-    <link rel="stylesheet" href="{% static 'home/css/landing_page_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/landing_page_styles.css' %}">
 
     <title>Math's Burguer | Home</title>
 
@@ -15,7 +15,7 @@
 
 <body>
 
-{% include 'home/partials/_header.html' %}
+{% include 'partials/_header.html' %}
 
 <section id="home" class="main-bg section">
     <div class="main-content intro-content">
@@ -24,7 +24,7 @@
             <p>O melhor hambúrguer artesanal de Guarapuava.</p>
         </div>
         <div class="intro-img">
-            <img src="{% static 'home/img/backgrounds/hamburguer.svg' %}" alt="Hambúrguer.">
+            <img src="{% static 'img/backgrounds/hamburguer.svg' %}" alt="Hambúrguer.">
         </div>
     </div>
 </section>
@@ -49,19 +49,19 @@
         <div class="grid">
             <article class="card">
                 <h3>João da Silva</h3>
-                <img src="{% static 'home/img/users/joao.png' %}" alt="joão"/>
+                <img src="{% static 'img/users/joao.png' %}" alt="joão"/>
                 <p>O melhor hamburguer que eu ja comi na vida! Recomendo para todos!</p>
                 <legend>27/01/2021</legend>
             </article>
             <article class="card">
                 <h3>Carminha</h3>
-                <img src="{% static 'home/img/users/carminha.jpg' %}" alt="Carminha"/>
+                <img src="{% static 'img/users/carminha.jpg' %}" alt="Carminha"/>
                 <p>O melhor hamburguer que eu ja comi na vida! Recomendo para todos!</p>
                 <legend>20/01/2021</legend>
             </article>
             <article class="card">
                 <h3>Neymar Jr</h3>
-                <img src="{% static 'home/img/users/neymar.jpg' %}" alt="Neymar"/>
+                <img src="{% static 'img/users/neymar.jpg' %}" alt="Neymar"/>
                 <p>O melhor hamburguer que eu ja comi na vida! Recomendo para todos!</p>
                 <legend>11/03/2021</legend>
             </article>
@@ -77,20 +77,20 @@
         <div class="grid">
             <div class="burguers-card">
                 <h3>Burguer da Casa</h3>
-                <img class="burguer-card-img" src="{% static 'home/img/products/hamburguerEspecial.jpg' %}"
+                <img class="burguer-card-img" src="{% static 'img/products/hamburguerEspecial.jpg' %}"
                      alt="Hambúrguer especial da casa."/>
                 <p>200 gramas de hambúrguer de costela;<br>Folhas de alface americana;<br>Tomates fresquinhos;<br>Queijo
                     prato;<br>Maionese da casa.</p>
             </div>
             <div class="burguers-card">
                 <h3>Bacon Burguer</h3>
-                <img class="burguer-card-img" src="{% static 'home/img/products/hamburguerBacon.jpeg' %}"
+                <img class="burguer-card-img" src="{% static 'img/products/hamburguerBacon.jpeg' %}"
                      alt="Bacon Burguer."/>
                 <p>180 gramas de hambúrguer bovino;<br>Queijo prato;<br>Bacon;<br>Muito bacon.</p>
             </div>
             <div class="burguers-card">
                 <h3>Cheddar Burguer</h3>
-                <img class="burguer-card-img" src="{% static 'home/img/products/hamburguerCheddar.jpg' %}"
+                <img class="burguer-card-img" src="{% static 'img/products/hamburguerCheddar.jpg' %}"
                      alt="Cheddar Burguer."/>
                 <p>180 gramas de hambúrguer bovino;<br>Cebola caramelizada;<br>Queijo cheddar.</p>
             </div>
@@ -106,7 +106,7 @@
         </div>
 
         <div class="intro-img">
-            <img src="{% static 'home/img/backgrounds/street-food.svg' %}" alt="Caminhão de street food">
+            <img src="{% static 'img/backgrounds/street-food.svg' %}" alt="Caminhão de street food">
         </div>
 
         <div class="contact-form">
@@ -141,7 +141,7 @@
     </div>
 </section>
 
-{% include 'home/partials/_footer.html' %}
-{% include 'home/partials/_to_top_button.html' %}
+{% include 'partials/_footer.html' %}
+{% include 'partials/_to_top_button.html' %}
 </body>
 </html>

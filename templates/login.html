@@ -4,15 +4,15 @@
 <html lang="pt-BR">
 
 <head>
-    {% include 'home/partials/_head.html' %}
+    {% include 'partials/_head.html' %}
 
     <title>Math's Burguer | Login</title>
 
-    <link rel="stylesheet" href="{% static 'home/css/login_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login_styles.css' %}">
 </head>
 
 <body>
-{% include 'home/partials/_header.html' %}
+{% include 'partials/_header.html' %}
 
 <section class="login-background">
     <div class="main-content container">
@@ -23,8 +23,8 @@
                 <form method="POST" action="">
                     {% csrf_token %}
 
-                    <label for="user">Usuário</label>
-                    <input type="text" name="user" id="user" placeholder="Seu usuário">
+                    <label for="email">E-mail</label>
+                    <input type="text" name="email" id="email" placeholder="Seu e-mail">
 
                     <label for="password">Senha</label>
                     <input type="password" name="password" id="password" placeholder="Sua senha">
@@ -40,12 +40,12 @@
         </div>
 
         <div class="login-img">
-            <img src="{% static 'home/img/backgrounds/pessoa-comendo.svg' %}" alt="Hambúrguer.">
+            <img src="{% static 'img/backgrounds/pessoa-comendo.svg' %}" alt="Hambúrguer.">
         </div>
     </div>
 </section>
 
-{% include 'home/partials/_footer.html' %}
-{% include 'home/partials/_to_top_button.html' %}
+{% include 'partials/_footer.html' %}
+{% include 'partials/_to_top_button.html' %}
 </body>
 </html>

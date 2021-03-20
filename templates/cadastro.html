@@ -3,20 +3,20 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-    {% include 'home/partials/_head.html' %}
+    {% include 'partials/_head.html' %}
 
     <title>Math's Burguer | Cadastro</title>
 
-    <link rel="stylesheet" href="{% static 'home/css/cadastro_styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cadastro_styles.css' %}">
 </head>
 <body>
-{% include 'home/partials/_header.html' %}
+{% include 'partials/_header.html' %}
 
 <section class="cadastro-background">
     <div class="main-content container">
 
         <div class="cadastro-img">
-            <img src="{% static 'home/img/backgrounds/pessoa-comendo.svg' %}" alt="Hambúrguer.">
+            <img src="{% static 'img/backgrounds/pessoa-comendo.svg' %}" alt="Hambúrguer.">
         </div>
 
         <div class="cadastro">
@@ -25,8 +25,8 @@
                 <form method="POST" action="">
                     {% csrf_token %}
                     <div class="cadastro-inputs">
-                        <label for="user">Usuário</label>
-                        <input type="text" name="user" id="user" placeholder="Usuário">
+                        <label for="name">Nome</label>
+                        <input type="text" name="name" id="name" placeholder="Nome">
                     </div>
 
                     <div class="cadastro-inputs">
@@ -55,7 +55,7 @@
     </div>
 </section>
 
-{% include 'home/partials/_footer.html' %}
-{% include 'home/partials/_to_top_button.html' %}
+{% include 'partials/_footer.html' %}
+{% include 'partials/_to_top_button.html' %}
 </body>
 </html>
