@@ -114,7 +114,7 @@ body .full-width {
   gap: var(--gap);
 }
 
-.form-grid legend {
+.contact-form legend {
   font-style: italic;
   font-size: 1.6rem;
   margin-bottom: 1rem;
@@ -161,10 +161,6 @@ body .full-width {
 .form-group button:hover {
   background: white;
   color: var(--primary-color);
-}
-
-.form-group::placeholder {
-  color: gray;
 }
 
 .about-us-card {
