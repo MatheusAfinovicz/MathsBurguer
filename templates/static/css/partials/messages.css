@@ -1,0 +1,15 @@
+/*TODO: messages class for each type of alert*/
+
+.messages-div {
+    background: white;
+}
+
+.messages {
+    background: green;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    list-style-type: none;
+}
+

@@ -1,0 +1,11 @@
+<!-- TODO: messages class for each type of alert*/ -->
+
+{% if messages %}
+<div class="messages-div">
+    <ul class="messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
