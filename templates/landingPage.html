@@ -116,17 +116,17 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="first-name">Nome</label>
-                    {{ form.first_name }}
+                    <input type="text" id="first-name" value="{{ request.POST.first_name }}" name="first_name" placeholder="Nome">
                 </div>
 
                 <div class="form-group">
                     <label for="last-name">Sobrenome</label>
-                    {{ form.last_name }}
+                    <input type="text" id="last-name" value="{{ request.POST.last_name }}" name="last_name" placeholder="Sobrenome">
                 </div>
 
                 <div class="form-group">
                     <label for="email">E-mail</label>
-                    {{ form.email }}
+                    <input type="email" id="email" value="{{ request.POST.email }}" name="email" placeholder="Email">
                 </div>
 
                 <div class="form-group full-width">
