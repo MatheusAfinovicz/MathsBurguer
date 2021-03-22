@@ -3,6 +3,7 @@ from .models import FormMessageBox
 from django.core.validators import validate_email
 from django.core.exceptions import ValidationError
 from django.contrib import messages
+from my_utils import check_for_special_chars
 
 
 def index(request):
@@ -17,7 +18,7 @@ def home(request):
     form = FormMessageBox(request.POST)
 
     if not form.is_valid():
-        messages.add_message(request, messages.ERROR, 'Algo não é valido')
+        messages.add_message(request, messages.ERROR, 'Erro: Formulário inválido')
         form = FormMessageBox(request.POST)
         return render(request, 'landingPage.html', {'form': form})
 
@@ -27,10 +28,31 @@ def home(request):
         validate_email(email)
 
     except ValidationError:
-        messages.add_message(request, messages.ERROR, 'E-mail inválido')
+        messages.add_message(request, messages.ERROR, 'Erro: E-mail inválido')
+        form = FormMessageBox(request.POST)
+        return render(request, 'landingPage.html', {'form': form})
+
+    first_name = request.POST.get('first_name')
+
+    if not check_for_special_chars(first_name) or ' ' in first_name:
+        messages.add_message(request, messages.ERROR, 'Erro: O nome não pode conter espaços ou caracteres especiais')
+        form = FormMessageBox(request.POST)
+        return render(request, 'landingPage.html', {'form': form})
+
+    last_name = request.POST.get('last_name')
+
+    if not check_for_special_chars(last_name):
+        messages.add_message(request, messages.ERROR, 'Erro: O sobrenome não pode conter caracteres especiais')
+        form = FormMessageBox(request.POST)
+        return render(request, 'landingPage.html', {'form': form})
+
+    msg = request.POST.get('message')
+
+    if len(msg) <= 10:
+        messages.add_message(request, messages.ERROR, 'Erro: A mensagem precisa ter no mínimo 10 caracteres')
         form = FormMessageBox(request.POST)
         return render(request, 'landingPage.html', {'form': form})
 
     form.save()
-    messages.add_message(request, messages.SUCCESS, 'Recebemos sua mensagem!')
+    messages.add_message(request, messages.SUCCESS, 'Sucesso: Recebemos sua mensagem!')
     return redirect('/home/')
