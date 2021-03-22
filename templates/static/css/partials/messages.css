@@ -1,15 +1,21 @@
-/*TODO: messages class for each type of alert*/
-
 .messages-div {
     background: white;
+    padding: 1rem;
 }
 
 .messages {
-    background: green;
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: center;
-    align-self: center;
     list-style-type: none;
+    border-radius: 1rem;
 }
 
+.success {
+    background: lightgreen;
+}
+
+.error {
+    background: #e35a4e;
+    color: white;
+}

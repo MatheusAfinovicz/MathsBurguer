@@ -1,11 +1,9 @@
-<!-- TODO: messages class for each type of alert*/ -->
-
 {% if messages %}
 <div class="messages-div">
-    <ul class="messages">
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
-    </ul>
+    {% for message in messages %}
+        <ul class="messages {{ message.level_tag }}">
+            <li>{{ message }}</li>
+        </ul>
+    {% endfor %}
 </div>
 {% endif %}
