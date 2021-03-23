@@ -1,11 +1,33 @@
 from django.shortcuts import render, redirect
-from django.contrib import messages
+from django.contrib import messages, auth
 from django.contrib.auth.models import User
 from my_utils import check_for_special_chars, email_validator
+from products.views import dashboard
+from home.views import home
 
 
 def login(request):
-    return render(request, 'login.html')
+    if request.method != 'POST':
+        if request.user.is_authenticated:
+            return redirect(dashboard)
+        return render(request, 'login.html')
+
+    email = request.POST.get('email')
+    password = request.POST.get('password')
+
+    if not email or not password:
+        messages.add_message(request, messages.ERROR, 'Erro: Preencha todos os campos')
+        return render(request, 'login.html')
+
+    user = auth.authenticate(request, username=email, password=password)
+
+    if not user:
+        messages.add_message(request, messages.ERROR, 'Erro: Email ou Senha incorretos')
+        return render(request, 'login.html')
+
+    auth.login(request, user)
+    messages.add_message(request, messages.SUCCESS, 'Logado com Sucesso!')
+    return redirect(dashboard)
 
 
 def cadastro(request):
@@ -60,3 +82,8 @@ def cadastro(request):
 
     messages.add_message(request, messages.SUCCESS, 'Conta criada com sucesso!')
     return redirect(login)
+
+
+def logout(request):
+    auth.logout(request)
+    return redirect(home)

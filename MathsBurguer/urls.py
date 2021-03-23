@@ -25,5 +25,6 @@ urlpatterns = [
     path('', home.views.index),
     path('login/', users.views.login),
     path('cadastro/', users.views.cadastro),
+    path('logout/', users.views.logout),
     path('dashboard/', products.views.dashboard),
 ]

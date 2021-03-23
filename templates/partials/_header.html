@@ -5,11 +5,16 @@
     <div class="main-content menu-content">
       <h1 onclick="getElementById('close-menu').checked = false;">
         <a href="
-            {% if 'home' not in request.path %}/home{% else %}#{% endif %}">Math's Burguer</a>
+            {% if 'home' not in request.path and 'dashboard' not in request.path %}/home
+            {% elif 'dashboard' in request.path %}/dashboard
+            {% else %}#
+            {% endif %}">Math's Burguer</a>
       </h1>
 
       <nav>
         <ul onclick="getElementById('close-menu').checked = false;">
+
+        {% if 'dashboard' not in request.path %}
             {%if 'cadastro' not in request.path and 'login' not in request.path  %}
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#avaliacoes">Avaliações</a></li>
@@ -18,6 +23,11 @@
             {% endif %}
             <li><a href="/login/">Login</a></li>
             <li><a href="/cadastro/">Cadastro</a></li>
+        {% else %}
+            <li><a href="#">Pedidos</a></li>
+            <li><a href="#">Minha Conta</a></li>
+            <li><a href="/logout/">Logout</a></li>
+        {% endif %}
         </ul>
       </nav>
     </div>
