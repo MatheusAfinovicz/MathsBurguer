@@ -23,7 +23,7 @@
         <div class="cadastro">
             <div class="cadastro-form">
                 <h6>Cadastre-se para saborear nossos irresistíveis sabores.</h6>
-                <form method="POST" action="/login/">
+                <form method="POST" action="/cadastro/">
                     {% csrf_token %}
                     <div class="cadastro-inputs">
                         <label for="name">Nome</label>
@@ -32,7 +32,7 @@
 
                     <div class="cadastro-inputs">
                         <label for="email">E-mail</label>
-                        <input class="email-input" type="text" name="email" id="email" placeholder="E-mail">
+                        <input class="email-input" type="email" name="email" id="email" placeholder="E-mail">
                     </div>
 
                     <div class="cadastro-inputs">

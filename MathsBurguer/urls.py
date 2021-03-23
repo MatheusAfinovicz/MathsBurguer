@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 import home.views
 import users.views
+import products.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -24,4 +25,5 @@ urlpatterns = [
     path('', home.views.index),
     path('login/', users.views.login),
     path('cadastro/', users.views.cadastro),
+    path('dashboard/', products.views.dashboard),
 ]
