@@ -26,23 +26,23 @@
                 <form method="POST" action="/cadastro/">
                     {% csrf_token %}
                     <div class="cadastro-inputs">
-                        <label for="name">Nome</label>
-                        <input type="text" name="name" id="name" placeholder="Nome">
+                        <label for="full_name">Nome</label>
+                        <input type="text" name="full_name" value="{{ request.POST.full_name }}" placeholder="Nome">
                     </div>
 
                     <div class="cadastro-inputs">
                         <label for="email">E-mail</label>
-                        <input class="email-input" type="email" name="email" id="email" placeholder="E-mail">
+                        <input type="email" name="email" value="{{ request.POST.email }}" placeholder="E-mail">
                     </div>
 
                     <div class="cadastro-inputs">
                         <label for="password">Senha</label>
-                        <input type="password" name="password" id="password" placeholder="Senha">
+                        <input type="password" name="password" placeholder="Senha">
                     </div>
 
                     <div class="cadastro-inputs">
                         <label for="confirm_password">Repita sua senha</label>
-                        <input type="password" name="confirm_password" id="confirm_password" placeholder="Repita sua senha">
+                        <input type="password" name="confirm_password" placeholder="Repita sua senha">
                     </div>
 
                     <button class="cadastro-button" type="submit">Enviar</button>

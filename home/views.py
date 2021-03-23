@@ -1,9 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import FormMessageBox
-from django.core.validators import validate_email
-from django.core.exceptions import ValidationError
 from django.contrib import messages
-from my_utils import check_for_special_chars
+from my_utils import check_for_special_chars, email_validator
 
 
 def index(request):
@@ -24,10 +22,7 @@ def home(request):
 
     email = request.POST.get('email')
 
-    try:
-        validate_email(email)
-
-    except ValidationError:
+    if not email_validator(email):
         messages.add_message(request, messages.ERROR, 'Erro: E-mail inválido')
         form = FormMessageBox(request.POST)
         return render(request, 'landingPage.html', {'form': form})
