@@ -32,6 +32,9 @@ def login(request):
 
 def cadastro(request):
     if request.method != 'POST':
+        if request.user.is_authenticated:
+            messages.add_message(request, messages.ERROR, 'Você já possui um usuário logado. Faça Logout primeiro')
+            return redirect(dashboard)
         return render(request, 'cadastro.html')
 
     full_name = request.POST.get('full_name')
