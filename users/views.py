@@ -1,14 +1,17 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
-from my_utils import check_for_special_chars, email_validator
-from products.views import dashboard
+from utils.email_validator import email_validator
+from utils.special_chars import check_for_special_chars
 from home.views import home
+from django.contrib.auth.decorators import login_required
 
 
 def login(request):
     if request.method != 'POST':
         if request.user.is_authenticated:
+            messages.add_message(request, messages.SUCCESS, f'Você já está logado como '
+                                                            f'{request.user.first_name} {request.user.last_name}!')
             return redirect(dashboard)
         return render(request, 'login.html')
 
@@ -33,7 +36,9 @@ def login(request):
 def cadastro(request):
     if request.method != 'POST':
         if request.user.is_authenticated:
-            messages.add_message(request, messages.ERROR, 'Você já possui um usuário logado. Faça Logout primeiro')
+            messages.add_message(request, messages.ERROR, f'Você está logado como '
+                                                          f'{request.user.first_name} {request.user.last_name}! '
+                                                          f'Faça Logout primeiro')
             return redirect(dashboard)
         return render(request, 'cadastro.html')
 
@@ -90,3 +95,8 @@ def cadastro(request):
 def logout(request):
     auth.logout(request)
     return redirect(home)
+
+
+@login_required(login_url='/login/')
+def dashboard(request):
+    return render(request, 'dashboard.html')
