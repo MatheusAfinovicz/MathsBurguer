@@ -2,12 +2,53 @@
 {% load static %}
 
 {% block title %}
-    Dashboard
+    {{ user.first_name }} Menu's
 {% endblock %}
 
-<!-- TODO: terminar isso aqui tambem -->
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/dashboard_styles.css' %}">
+{% endblock %}
 
 {% block content %}
-    <h1>Dashboard</h1>
-    <p>Olá {{ user.first_name }}</p>
+    <section class="section intro-content">
+        <div class="navigation main-bg">
+            <h3 id="#">Olá</h3>
+            <h3>{{ user.first_name }}!</h3>
+            <div class="links-div">
+                <h1>Menu</h1>
+                <div class="links">
+                    <p><a href="#">Histórico de Pedidos</a></p>
+                    <p><a href="#">Meus Endereços</a></p>
+                    <p><a href="#">Carrinho</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="content white-bg">
+            <h6>Está esperando o que para fazer seu pedido?</h6>
+
+            <section class="display">
+                <section class="offers">
+                    <h1>Promoções</h1>
+                    <div class="products">
+
+                    </div>
+                </section>
+
+                <section class="sanduichs">
+                    <h1>Destaques</h1>
+                    <div class="products">
+
+                    </div>
+                </section>
+
+                <section class="drinks">
+                    <h1>Bebidas</h1>
+                    <div class="products">
+
+                    </div>
+                </section>
+            </section>
+
+        </div>
+    </section>
 {% endblock %}

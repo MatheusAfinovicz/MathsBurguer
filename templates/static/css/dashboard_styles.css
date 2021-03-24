@@ -1,0 +1,74 @@
+body {
+    background: papayawhip;
+}
+
+.intro-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 0.35fr 1fr;
+    gap: 1rem;
+    min-height: 100vh;
+}
+
+.navigation {
+    padding: 1.5rem;
+}
+
+.navigation h3 {
+    display: flex;
+    justify-content: center;
+}
+
+.links-div {
+    margin: 2rem 0 0 0;
+    border: 3px solid white;
+    border-radius: 2rem;
+    height: 30rem;
+}
+
+.links-div h1 {
+    margin: 1rem 0 0 0;
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.links {
+    padding: 2rem 0;
+}
+
+.links p {
+    font-size: 2rem;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 1rem;
+}
+
+.links a {
+    color: white;
+}
+
+.links a:hover {
+    font-size: 2.5rem;
+}
+
+.content {
+    background: papayawhip;
+    padding: 2rem;
+}
+
+.display {
+    padding: 2rem;
+}
+
+.display h1 {
+    font-size: 3rem;
+}
+
+.products {
+    border: 3px solid var(--primary-color);
+    border-radius: 2rem;
+    height: 20rem;
+    width: border-box;
+}
