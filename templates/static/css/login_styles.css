@@ -86,12 +86,6 @@ body {
     color: var(--secondary-color);
 }
 
-.intro-img {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-}
-
 .login-img img, .login-img svg {
     max-width: 100%;
     height: auto;
