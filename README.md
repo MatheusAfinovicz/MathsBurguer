@@ -20,6 +20,16 @@ virtualenv venv
 pip install -r requirements.txt
 ```
 
+<li>Iniciar banco de dados:</li>
+
+```console
+python manage.py makemigrations
+```
+
+```console
+python manage.py migrate
+```
+
 <h3>Iniciar servidor:</h3>
 
 ```console
