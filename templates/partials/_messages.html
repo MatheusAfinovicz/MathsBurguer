@@ -1,4 +1,4 @@
-{% if messages %}
+{% if messages and 'dashboard' not in request.path %}
 <div class="messages-div">
     {% for message in messages %}
         <ul class="messages {{ message.level_tag }}">

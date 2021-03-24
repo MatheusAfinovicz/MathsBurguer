@@ -24,6 +24,15 @@
             </div>
         </div>
         <div class="content white-bg">
+            {% if messages %}
+                <div class="messages-div">
+                    {% for message in messages %}
+                        <ul class="messages {{ message.level_tag }}">
+                            <li>{{ message }}</li>
+                        </ul>
+                    {% endfor %}
+                </div>
+            {% endif %}
             <h6>Está esperando o que para fazer seu pedido?</h6>
 
             <section class="display">
