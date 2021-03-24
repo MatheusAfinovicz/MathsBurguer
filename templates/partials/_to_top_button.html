@@ -1,1 +1,3 @@
-<a class="back-to-top" href="#">➤</a>
+{% if 'login' not in request.path and 'cadastro' not in request.path %}
+    <a class="back-to-top" href="#">➤</a>
+{% endif %}

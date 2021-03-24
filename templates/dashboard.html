@@ -1,21 +1,13 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!doctype html>
-<html lang="pt-BR">
-<head>
-    {% include 'partials/_head.html' %}
-    <title>Math's Burguer | Dashboard</title>
-    <!-- TODO: terminar isso aqui tambem -->
-</head>
-<body>
-{% include 'partials/_header.html' %}
-{% include 'partials/_messages.html' %}
+{% block title %}
+    Dashboard
+{% endblock %}
 
-<h1>Dashboard</h1>
+<!-- TODO: terminar isso aqui tambem -->
 
-<p>Olá {{ user.first_name }}</p>
-
-{% include 'partials/_footer.html' %}
-{% include 'partials/_to_top_button.html' %}
-</body>
-</html>
+{% block content %}
+    <h1>Dashboard</h1>
+    <p>Olá {{ user.first_name }}</p>
+{% endblock %}

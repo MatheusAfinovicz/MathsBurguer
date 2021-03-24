@@ -1,62 +1,51 @@
+{% extends 'base.html' %}
 {% load static %}
 
-<!doctype html>
-<html lang="pt-BR">
-<head>
-    {% include 'partials/_head.html' %}
+{% block title %}
+    Cadastro
+{% endblock %}
 
-    <title>Math's Burguer | Cadastro</title>
-
+{% block styles %}
     <link rel="stylesheet" href="{% static 'css/cadastro_styles.css' %}">
-</head>
-<body>
-{% include 'partials/_header.html' %}
-{% include 'partials/_messages.html' %}
+{% endblock %}
 
-<section class="cadastro-background">
-    <div class="main-content container">
+{% block content %}
+    <section class="cadastro-background">
+        <div class="main-content container">
+            <div class="cadastro-img">
+                <img src="{% static 'img/backgrounds/pessoa-comendo.svg' %}" alt="Hambúrguer.">
+            </div>
+            <div class="cadastro">
+                <div class="cadastro-form">
+                    <h6>Cadastre-se para saborear nossos irresistíveis sabores.</h6>
+                    <form method="POST" action="/cadastro/">
+                        {% csrf_token %}
+                        <div class="cadastro-inputs">
+                            <label for="full_name">Nome</label>
+                            <input type="text" name="full_name" value="{{ request.POST.full_name }}" placeholder="Nome">
+                        </div>
 
-        <div class="cadastro-img">
-            <img src="{% static 'img/backgrounds/pessoa-comendo.svg' %}" alt="Hambúrguer.">
-        </div>
+                        <div class="cadastro-inputs">
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" value="{{ request.POST.email }}" placeholder="E-mail">
+                        </div>
 
-        <div class="cadastro">
-            <div class="cadastro-form">
-                <h6>Cadastre-se para saborear nossos irresistíveis sabores.</h6>
-                <form method="POST" action="/cadastro/">
-                    {% csrf_token %}
-                    <div class="cadastro-inputs">
-                        <label for="full_name">Nome</label>
-                        <input type="text" name="full_name" value="{{ request.POST.full_name }}" placeholder="Nome">
+                        <div class="cadastro-inputs">
+                            <label for="password">Senha</label>
+                            <input type="password" name="password" placeholder="Senha">
+                        </div>
+
+                        <div class="cadastro-inputs">
+                            <label for="confirm_password">Repita sua senha</label>
+                            <input type="password" name="confirm_password" placeholder="Repita sua senha">
+                        </div>
+                        <button class="cadastro-button" type="submit">Enviar</button>
+                    </form>
+                    <div class="login">
+                        <p>Já possui uma conta? Faça login <a href="/login/">AQUI</a></p>
                     </div>
-
-                    <div class="cadastro-inputs">
-                        <label for="email">E-mail</label>
-                        <input type="email" name="email" value="{{ request.POST.email }}" placeholder="E-mail">
-                    </div>
-
-                    <div class="cadastro-inputs">
-                        <label for="password">Senha</label>
-                        <input type="password" name="password" placeholder="Senha">
-                    </div>
-
-                    <div class="cadastro-inputs">
-                        <label for="confirm_password">Repita sua senha</label>
-                        <input type="password" name="confirm_password" placeholder="Repita sua senha">
-                    </div>
-
-                    <button class="cadastro-button" type="submit">Enviar</button>
-                </form>
-
-                <div class="login">
-                    <p>Já possui uma conta? Faça login <a href="/login/">AQUI</a></p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-{% include 'partials/_footer.html' %}
-{% include 'partials/_to_top_button.html' %}
-</body>
-</html>
+    </section>
+{% endblock %}
