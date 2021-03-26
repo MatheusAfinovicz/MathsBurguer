@@ -5,6 +5,7 @@ from django import forms
 
 class UserAdress(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Usuário')
+    name = models.CharField(max_length=30, verbose_name='Nome')
     street = models.CharField(max_length=55, verbose_name='Rua')
     number = models.CharField(max_length=5, verbose_name='Número')
     district = models.CharField(max_length=30, verbose_name='Bairro')

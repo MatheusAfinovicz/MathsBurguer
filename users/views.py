@@ -5,6 +5,7 @@ from utils.email_validator import email_validator
 from utils.special_chars import check_for_special_chars
 from home.views import home
 from django.contrib.auth.decorators import login_required
+from .models import FormAdress
 
 
 def login(request):
@@ -100,3 +101,29 @@ def logout(request):
 @login_required(login_url='/login/')
 def dashboard(request):
     return render(request, 'dashboard.html')
+
+
+@login_required(login_url='/login/')
+def adresses(request):
+    return render(request, 'adresses.html')
+
+
+@login_required(login_url='/login/')
+def create_adress(request):
+    if request.method != 'POST':
+        form = FormAdress()
+        return render(request, 'new_adress.html', {'form': form})
+
+    form = FormAdress(request.POST)
+
+    if not form.is_valid():
+        messages.add_message(request, messages.ERROR, 'Erro: Formulário inválido')
+        form = FormAdress(request.POST)
+        return render(request, 'new_adress.html', {'form': form})
+
+    adress = form.save(commit=False)
+    adress.user = request.user
+    adress.save()
+    messages.add_message(request, messages.SUCCESS, 'Novo endereço adicionado com sucesso')
+
+    return render(request, 'adresses.html')
