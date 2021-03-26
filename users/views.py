@@ -5,7 +5,7 @@ from utils.email_validator import email_validator
 from utils.special_chars import check_for_special_chars
 from home.views import home
 from django.contrib.auth.decorators import login_required
-from .models import FormAdress
+from .models import FormAdress, UserAdress
 
 
 def login(request):
@@ -105,7 +105,10 @@ def dashboard(request):
 
 @login_required(login_url='/login/')
 def adresses(request):
-    return render(request, 'adresses.html')
+    user_adresses = UserAdress.objects.filter(
+        user=request.user
+    )
+    return render(request, 'adresses.html', {'adresses': user_adresses})
 
 
 @login_required(login_url='/login/')
@@ -126,4 +129,4 @@ def create_adress(request):
     adress.save()
     messages.add_message(request, messages.SUCCESS, 'Novo endereço adicionado com sucesso')
 
-    return render(request, 'adresses.html')
+    return redirect(adresses)
