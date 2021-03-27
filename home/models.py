@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from django import forms
+
 
 
 class Messages(models.Model):
@@ -16,9 +16,3 @@ class Messages(models.Model):
     class Meta:
         verbose_name = 'Mensagem'
         verbose_name_plural = 'Mensagens'
-
-
-class FormMessage(forms.ModelForm):
-    class Meta:
-        model = Messages
-        exclude = ('date',)

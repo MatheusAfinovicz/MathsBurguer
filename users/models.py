@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django import forms
 
 
 class UserAdress(models.Model):
@@ -21,7 +20,4 @@ class UserAdress(models.Model):
         verbose_name_plural = 'Endereços'
 
 
-class FormAdress(forms.ModelForm):
-    class Meta:
-        model = UserAdress
-        exclude = ('user',)
+

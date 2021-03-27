@@ -1,11 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages, auth
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+from home.views import home
+from .forms import FormAdress
+from .models import UserAdress
 from utils.email_validator import email_validator
 from utils.special_chars import check_for_special_chars
-from home.views import home
-from django.contrib.auth.decorators import login_required
-from .models import FormAdress, UserAdress
 
 
 def login(request):

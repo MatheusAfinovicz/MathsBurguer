@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import FormMessage
+from .forms import FormMessage
 from django.contrib import messages
 from utils.email_validator import email_validator
 from utils.special_chars import check_for_special_chars
