@@ -1,6 +1,6 @@
 <h1 align="center">Math's Burguer</h1>
 
-<p align="center">Landing Page com HTML e CSS + Backend em Python e Django para um delivery de lanches</p>
+<p align="center">Landing Page responsiva e Backend em Django para um delivery de lanches</p>
 
 <h3>Requisitos</h3>
 
@@ -34,4 +34,17 @@ python manage.py migrate
 
 ```console
 python manage.py runserver
+```
+
+<h3>Criando um super usuário:</h3>
+<p>Caso queira, você pode criar um super usuário para ter acesso direto as models:</p>
+
+```console
+python manage.py createsuperuser
+```
+
+<p>No navegador: </p>
+
+```console
+127.0.0.1:8000/admin/
 ```
