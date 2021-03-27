@@ -5,10 +5,23 @@
     Endereços
 {% endblock %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/adresses_styles.css' %}">
+{% endblock %}
+
 {% block content %}
-    <h1>Endereços</h1>
-    {% for adress in adresses %}
-        <p>{{ adress.name }}, {{ adress.street }}, {{ adress.number }}</p>
-    {% endfor %}
-    <a href="/dashboard/novo-endereco/">Adicionar novo</a>
+    <section class="main-bg adresses-content">
+        <h1>Seus Endereços</h1>
+        <div class="adresses">
+            <div class="adress">
+                    <p>Nome, Rua, Número</p>
+                </div>
+            {% for adress in adresses %}
+                <div class="adress">
+                    <p>{{ adress.name }}, {{ adress.street }}, {{ adress.number }}</p>
+                </div>
+            {% endfor %}
+            <a href="{% url 'new_adresses' %}">Adicionar novo</a>
+        </div>
+    </section>
 {% endblock %}

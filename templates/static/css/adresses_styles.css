@@ -1,0 +1,22 @@
+.adresses-content {
+    min-height: 100vh;
+    padding: 2rem 5rem;
+}
+
+.adresses-content h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.adresses {
+    border: 3px solid black;
+    border-radius: 2.4rem;
+    margin: 2rem 5rem;
+    padding: 2rem 5rem;
+}
+
+.adress {
+    display: flex;
+    justify-content: center;
+}
+

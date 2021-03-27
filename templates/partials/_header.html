@@ -21,12 +21,12 @@
                 <li><a href="#produtos">Produtos</a></li>
                 <li><a href="#contato">Contato</a></li>
             {% endif %}
-            <li><a href="/login/">Login</a></li>
-            <li><a href="/cadastro/">Cadastro</a></li>
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'register' %}">Cadastro</a></li>
         {% else %}
             <li><a href="#">Carrinho</a></li>
             <li><a href="#">Minha Conta</a></li>
-            <li><a href="/logout/">Logout</a></li>
+            <li><a href="{% url 'register' %}">Logout</a></li>
         {% endif %}
         </ul>
       </nav>

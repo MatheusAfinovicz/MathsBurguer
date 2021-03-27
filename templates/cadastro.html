@@ -18,7 +18,7 @@
             <div class="cadastro">
                 <div class="cadastro-form">
                     <h6>Cadastre-se para saborear nossos irresistíveis sabores.</h6>
-                    <form method="POST" action="/cadastro/">
+                    <form method="POST" action="{% url 'register' %}">
                         {% csrf_token %}
                         <div class="cadastro-inputs">
                             <label for="full_name">Nome</label>
@@ -42,7 +42,7 @@
                         <button class="cadastro-button" type="submit">Enviar</button>
                     </form>
                     <div class="login">
-                        <p>Já possui uma conta? Faça login <a href="/login/">AQUI</a></p>
+                        <p>Já possui uma conta? Faça login <a href="{% url 'login' %}">AQUI</a></p>
                     </div>
                 </div>
             </div>

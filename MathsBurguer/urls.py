@@ -22,10 +22,10 @@ import products.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home.views.home),
+    path('home/', home.views.home, name='home'),
     path('', home.views.index),
-    path('login/', users.views.login),
-    path('cadastro/', users.views.cadastro),
-    path('logout/', users.views.logout),
+    path('login/', users.views.login, name='login'),
+    path('cadastro/', users.views.cadastro, name='register'),
+    path('logout/', users.views.logout, name='logout'),
     path('dashboard/', include(users.urls)),
 ]

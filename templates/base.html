@@ -13,7 +13,10 @@
 
 <body>
 {% include 'partials/_header.html' %}
-{% include 'partials/_messages.html' %}
+
+{% if 'dashboard' not in request.path or 'endereco' in request.path %}
+    {% include 'partials/_messages.html' %}
+{% endif %}
 
     {% block content %}{% endblock %}
 

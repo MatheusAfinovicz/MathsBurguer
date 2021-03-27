@@ -1,12 +1,4 @@
-{% if messages and 'dashboard' not in request.path %}
-<div class="messages-div">
-    {% for message in messages %}
-        <ul class="messages {{ message.level_tag }}">
-            <li>{{ message }}</li>
-        </ul>
-    {% endfor %}
-</div>
-{% elif 'dashboard/novo-endereco' in request.path%}
+{% if messages %}
     <div class="messages-div">
         {% for message in messages %}
             <ul class="messages {{ message.level_tag }}">

@@ -15,7 +15,7 @@
             <div class="login">
                 <h6>Faça Login e peça os melhores lanches!</h6>
                 <div class="login-form">
-                    <form method="POST" action="/login/">
+                    <form method="POST" action="{% url 'login' %}">
                         {% csrf_token %}
 
                         <label for="email">E-mail</label>
@@ -27,7 +27,7 @@
                         <button class="login-button" type="submit">Enviar</button>
                     </form>
                     <div class="register">
-                        <p>Ainda não possui uma conta? Cadastre-se <a href="/cadastro/">AQUI</a></p>
+                        <p>Ainda não possui uma conta? Cadastre-se <a href="{% url 'register' %}">AQUI</a></p>
                     </div>
                 </div>
             </div>
