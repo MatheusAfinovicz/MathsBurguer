@@ -36,10 +36,11 @@
             <h6>Está esperando o que para fazer seu pedido?</h6>
 
             <section class="display">
-                <section class="offers">
-                    <h1>Promoções</h1>
+
+                <h1>Promoções</h1>
+                <section class="products">
                     {% for promotion in promotions %}
-                        <div class="products">
+                        <div class="offers">
                                 <img src="{{ promotion.picture.url }}" style="max-width: 100px; height: auto">
                                 {{ promotion.name }}
                                 {{ promotion.promotion_price }}
@@ -47,10 +48,11 @@
                     {% endfor %}
                 </section>
 
-                <section class="sanduichs">
-                    <h1>Destaques</h1>
+                <h1>Destaques</h1>
+                <section class="products">
+
                     {% for sandwich in sandwiches %}
-                        <div class="products">
+                        <div class="sandwiches">
                                 <img src="{{ sandwich.picture.url }}" style="max-width: 100px; height: auto">
                                 {{ sandwich.name }}
                                 {{ sandwich.normal_price }}
@@ -58,9 +60,9 @@
                     {% endfor %}
                 </section>
 
-                <section class="drinks">
-                    <h1>Bebidas</h1>
-                    <div class="products">
+                <h1>Bebidas</h1>
+                <section class="products">
+                    <div class="drinks">
 
                     </div>
                 </section>
