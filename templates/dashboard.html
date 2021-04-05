@@ -38,16 +38,24 @@
             <section class="display">
                 <section class="offers">
                     <h1>Promoções</h1>
-                    <div class="products">
-
-                    </div>
+                    {% for promotion in promotions %}
+                        <div class="products">
+                                <img src="{{ promotion.picture.url }}" style="max-width: 100px; height: auto">
+                                {{ promotion.name }}
+                                {{ promotion.promotion_price }}
+                        </div>
+                    {% endfor %}
                 </section>
 
                 <section class="sanduichs">
                     <h1>Destaques</h1>
-                    <div class="products">
-
-                    </div>
+                    {% for sandwich in sandwiches %}
+                        <div class="products">
+                                <img src="{{ sandwich.picture.url }}" style="max-width: 100px; height: auto">
+                                {{ sandwich.name }}
+                                {{ sandwich.normal_price }}
+                        </div>
+                    {% endfor %}
                 </section>
 
                 <section class="drinks">

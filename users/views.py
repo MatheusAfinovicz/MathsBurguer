@@ -7,6 +7,7 @@ from .forms import FormAdress
 from .models import UserAdress
 from utils.email_validator import email_validator
 from utils.special_chars import check_for_special_chars
+from products.views import dashboard
 
 
 def login(request):
@@ -97,11 +98,6 @@ def cadastro(request):
 def logout(request):
     auth.logout(request)
     return redirect(home)
-
-
-@login_required(login_url='/login/')
-def dashboard(request):
-    return render(request, 'dashboard.html')
 
 
 @login_required(login_url='/login/')

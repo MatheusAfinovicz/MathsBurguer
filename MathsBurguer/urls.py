@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 import home.views
 import users.views
 import users.urls
-import products.views
+import products.urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,4 +30,5 @@ urlpatterns = [
     path('cadastro/', users.views.cadastro, name='register'),
     path('logout/', users.views.logout, name='logout'),
     path('dashboard/', include(users.urls)),
+    path('dashboard/', include(products.urls)),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

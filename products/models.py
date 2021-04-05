@@ -2,7 +2,11 @@ from django.db import models
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=55, verbose_name='categoria')
+    name = models.CharField(
+        max_length=55,
+        choices=(('Lanches', 'Lanches'), ('Bebidas', 'Bebidas'), ('Combos', 'Combos')),
+        default='Lanches',
+        verbose_name='categoria')
 
     def __str__(self):
         return self.name
