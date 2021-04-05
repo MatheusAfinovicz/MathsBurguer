@@ -2,7 +2,6 @@ from django.db import models
 from django.utils import timezone
 
 
-
 class Messages(models.Model):
     first_name = models.CharField(max_length=100, verbose_name='Nome')
     last_name = models.CharField(max_length=100, verbose_name='Sobrenome')
